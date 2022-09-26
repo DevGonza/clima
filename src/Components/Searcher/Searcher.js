@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { Context } from '../../Store/AppContext'
 
 const Searcher = () => {
@@ -12,8 +13,11 @@ const Searcher = () => {
         </button>
         <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
           <form className="d-flex w-50" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search city" value={search} onChange={(e)=>setSearch(e.target.value)} aria-label="Search"/>
+            <input className="form-control me-2 text-center" type="search" placeholder="Search city" value={search} onChange={(e)=>setSearch(e.target.value)} aria-label="Search"/>
           </form>
+        </div>
+        <div>
+        <Link to='/settings'><button type='button' className='btn btn-secondary'><i className="bi bi-gear-wide-connected"></i></button></Link>
         </div>
       </div>
     </nav>
