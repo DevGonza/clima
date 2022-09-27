@@ -20,7 +20,7 @@ const Card = (props) => {
     return (
       <div>
         <div className="card-group my-3">
-          <div className="card my-2  bg-primary bg-gradient p-2">
+          <div className="card my-2 bg-primary bg-gradient p-2">
             <div>
               <h2 className='ms-4 text-white'>{city}</h2>
               <h2 className='ms-4 text-white text-uppercase'>{country}</h2>

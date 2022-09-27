@@ -7,10 +7,10 @@ import CardDetail from '../../Components/CardDetail/CardDetail'
 
 const DetailDay = () => {
   const [cityId, setCityId] = useState([])
-  const {id,friday} = useParams()
-  
+  const {id_city,friday} = useParams()
+
   const apiCityId = async () => {
-    const response = await axios.get(`${BASE_URL_TEMPERATURE}/${id}/${friday}`)
+    const response = await axios.get(`${BASE_URL_TEMPERATURE}/${id_city}/${friday}`)
     setCityId(response.data.data[0])
     console.log(response.data.data[0])
   }

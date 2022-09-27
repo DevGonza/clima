@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import dateFormat from 'dateformat'
 import './CardDetail.css'
-import { Link, useNavigate  } from 'react-router-dom';
-import { Context } from '../../Store/AppContext';
+import { Link } from 'react-router-dom';
+
 
 const CardDetail = (props) => {
   
@@ -13,19 +13,18 @@ const CardDetail = (props) => {
     img_Eight_AM,img_Nine_AM,img_Ten_AM,img_Eleven_AM,img_Twelve_PM,img_One_PM,img_Two_PM,img_Three_PM,img_Four_PM,img_Five_PM,img_Six_PM,img_Seven_PM,img_Eight_PM,img_Nine_PM,img_Ten_PM,img_Eleven_PM } = props
   
   const date = dateFormat(date_weather,"dddd")
-  const navigate = useNavigate();
 
     return (
-    <div className='mt-5 w-100 text-center border'>
-      <div className='button' style={{width:"10%"}}>
-        <Link to={"/"}><button type="button" className="btn btn-secondary w-100">Back</button></Link>
+    <div className='mt-5 w-100 text-center'>
+      <div className='d-flex justify-content-start'>
+      <Link to={"/"}><button type="button" className="btn btn-primary fw-bold text-uppercase my-2 mx-2"><i className="bi bi-arrow-left me-2"></i>back</button></Link>
       </div>
       <div className="card-group my-5 w-100">
         <div className="card">
           <div className="card-footer">
               <small className="fw-bold text-uppercase">{date}</small>
           </div>
-          <div className="card-body d-flex align-items-end">
+          <div className="card-body d-flex justify-content-center align-items-center">
             <h5 className="card-title">Forecast</h5>
           </div>
           <div className="card-footer">
@@ -182,7 +181,7 @@ const CardDetail = (props) => {
           <div className="card-footer">
               <small className="fw-bold text-uppercase">{date}</small>
           </div>
-          <div className="card-body d-flex align-items-end">
+          <div className="card-body d-flex justify-content-center align-items-center ">
             <h5 className="card-title">Forecast</h5>
           </div>
           <div className="card-footer">
