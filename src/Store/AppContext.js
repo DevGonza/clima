@@ -1,7 +1,6 @@
 import { useState, createContext, useEffect } from "react";
 import { BASE_URL, BASE_URL_TEMPERATURE } from '../utils';
 import axios from 'axios'
-import { Navigate } from "react-router-dom";
 
 export const Context = createContext(null)
 const UserProvider = ({ children }) => {
