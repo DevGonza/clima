@@ -6,7 +6,7 @@ const Settings = () => {
   return (
     <div className='bg-dark bg-gradient'>
       <div>
-        <Link to={"/"}><button type="button" className="btn btn-light fw-bold text-uppercase my-2 mx-2"><i className="bi bi-house-door me-2"></i>home</button></Link>
+        <Link to={"/clima"}><button type="button" className="btn btn-light fw-bold text-uppercase my-2 mx-2"><i className="bi bi-house-door me-2"></i>home</button></Link>
       </div>
       <div className='d-flex justify-content-around align-items-center flex-wrap' style={{height:"100vh"}}>
         <div>

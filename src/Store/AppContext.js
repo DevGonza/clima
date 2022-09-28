@@ -10,9 +10,8 @@ const UserProvider = ({ children }) => {
     const apiCity = async () => {
         const response = await axios.get(`${BASE_URL}`)
         setCity(response.data.data)
-        console.log(response.data.data)
     }
-    const buscador = city.filter(cities=> cities.city.toLowerCase().includes(search.toLocaleLowerCase()))
+
 
     const [putCity, setPutCity] = useState({
         city:"",
@@ -46,7 +45,8 @@ const UserProvider = ({ children }) => {
         sunday_img:"",
 
     })
-    console.log(putCity)
+
+
     const handleChange = async (e) => {
         await setPutCity({
           ...putCity,
@@ -149,8 +149,8 @@ const UserProvider = ({ children }) => {
           [e.target.name]: e.target.value,
         });
     };
-     console.log(putHourly)
 
+    
     const sendDataH = async () => { 
        const response = await axios.put(`${BASE_URL_TEMPERATURE}/${putHourly.city}`,putHourly)
          if(response.data.error === "True"){
@@ -159,6 +159,9 @@ const UserProvider = ({ children }) => {
             alert(response.data.msg)
         }
     }; 
+
+
+    const buscador = city.filter(cities=> cities.city.toLowerCase().includes(search.toLocaleLowerCase()))
 
     useEffect(() => {
         apiCity()

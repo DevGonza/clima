@@ -9,9 +9,9 @@ import NewCity from './Pages/NewCity/NewCity'
 
 function App() {
   return(
-  <Router>
+  <Router> 
     <Routes>
-      <Route path='/' element= {<Home />} />
+      <Route path='/clima' element= {<Home />} />
       <Route path='/detail/:id_city/:friday' element= {<DetailDay />} />
       <Route path='/settings' element= {<Settings />} />
       <Route path='/editcity' element= {<EditCity />} />

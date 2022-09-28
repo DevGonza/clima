@@ -17,7 +17,7 @@ const CardDetail = (props) => {
     return (
     <div className='mt-5 w-100 text-center'>
       <div className='d-flex justify-content-start'>
-      <Link to={"/"}><button type="button" className="btn btn-primary fw-bold text-uppercase my-2 mx-2"><i className="bi bi-arrow-left me-2"></i>back</button></Link>
+      <Link to={"/clima"}><button type="button" className="btn btn-primary fw-bold text-uppercase my-2 mx-2"><i className="bi bi-arrow-left me-2"></i>back</button></Link>
       </div>
       <div className="card-group my-5 w-100">
         <div className="card">
