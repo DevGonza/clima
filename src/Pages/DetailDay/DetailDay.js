@@ -12,7 +12,6 @@ const DetailDay = () => {
   const apiCityId = async () => {
     const response = await axios.get(`${BASE_URL_TEMPERATURE}/${id_city}/${friday}`)
     setCityId(response.data.data[0])
-    console.log(response.data.data[0])
   }
   
   useEffect(() => {
